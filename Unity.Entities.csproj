@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7e41f7f6-a15e-4eed-a6d2-f0c9dab1d14a</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Unity.Entities</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="System" />
+    <Reference Include="Unity.Collections" />
+    <Reference Include="Unity.Burst" />
+    <Reference Include="System.Core" />
+    <Reference Include="Unity.Mathematics" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Unity\Debug.cs" />
+    <Compile Include="Unity\Assertions\Assert.cs" />
+    <Compile Include="Unity\Profiling\ProfilerMarker.cs" />
+    <Compile Include="Unity\Entities\WorldDebuggingTools.cs" />
+    <Compile Include="Unity\Entities\BufferArray!1.cs" />
+    <Compile Include="Unity\Entities\ChangedFilterAttribute.cs" />
+    <Compile Include="Unity\Entities\RequireComponentTagAttribute.cs" />
+    <Compile Include="Unity\Entities\RequireSubtractiveComponentAttribute.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_1.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_2.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_3.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_4.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_1_WE.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_2_WE.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_3_WE.cs" />
+    <Compile Include="Unity\Entities\IBaseJobProcessComponentData_4_WE.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentData!1.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentData!2.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentData!3.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentData!4.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentDataWithEntity!1.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentDataWithEntity!2.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentDataWithEntity!3.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentDataWithEntity!4.cs" />
+    <Compile Include="Unity\Entities\JobProcessComponentDataCache.cs" />
+    <Compile Include="Unity\Entities\ProcessIterationData.cs" />
+    <Compile Include="Unity\Entities\IJobProcessComponentDataUtility.cs" />
+    <Compile Include="Unity\Entities\JobProcessComponentDataExtensions.cs" />
+    <Compile Include="Unity\Entities\DisallowRefReturnCrossingThisAttribute.cs" />
+    <Compile Include="Unity\Entities\ComponentTypes.cs" />
+    <Compile Include="Unity\Entities\CleanupEntity.cs" />
+    <Compile Include="Unity\Entities\EntityDataManager.cs" />
+    <Compile Include="Unity\Entities\ComponentDataArray!1.cs" />
+    <Compile Include="Unity\Entities\EntityArchetypeQuery.cs" />
+    <Compile Include="Unity\Entities\ComponentGroup.cs" />
+    <Compile Include="Unity\Entities\SortingUtilities.cs" />
+    <Compile Include="Unity\Entities\NativeArraySharedValues!1.cs" />
+    <Compile Include="Unity\Entities\ExclusiveEntityTransaction.cs" />
+    <Compile Include="Unity\Entities\SceneViewWorldPositionAttribute.cs" />
+    <Compile Include="Unity\Entities\CalculateReaderWriterDependency.cs" />
+    <Compile Include="Unity\Entities\AlwaysUpdateSystemAttribute.cs" />
+    <Compile Include="Unity\Entities\TypeManager.cs" />
+    <Compile Include="Unity\Entities\EndFrameBarrier.cs" />
+    <Compile Include="Unity\Entities\DisableAutoCreationAttribute.cs" />
+    <Compile Include="Unity\Entities\ScriptBehaviourManager.cs" />
+    <Compile Include="Unity\Entities\InjectionData.cs" />
+    <Compile Include="Unity\Entities\SharedComponentDataArray!1.cs" />
+    <Compile Include="Unity\Entities\ComponentGroupArrayStaticCache.cs" />
+    <Compile Include="Unity\Entities\ComponentGroupArrayData.cs" />
+    <Compile Include="Unity\Entities\ComponentGroupArray!1.cs" />
+    <Compile Include="Unity\Entities\ChunkAllocator.cs" />
+    <Compile Include="Unity\Entities\FilterType.cs" />
+    <Compile Include="Unity\Entities\ComponentGroupFilter.cs" />
+    <Compile Include="Unity\Entities\ComponentChunkCache.cs" />
+    <Compile Include="Unity\Entities\ComponentChunkIterator.cs" />
+    <Compile Include="Unity\Entities\EntityRemapUtility.cs" />
+    <Compile Include="Unity\Entities\InjectAttribute.cs" />
+    <Compile Include="Unity\Entities\EntityArray.cs" />
+    <Compile Include="Unity\Entities\IJobChunk.cs" />
+    <Compile Include="Unity\Entities\JobChunkExtensions.cs" />
+    <Compile Include="Unity\Entities\CustomInjectionHookAttribute.cs" />
+    <Compile Include="Unity\Entities\InjectionContext.cs" />
+    <Compile Include="Unity\Entities\InjectionHook.cs" />
+    <Compile Include="Unity\Entities\InjectionHookSupport.cs" />
+    <Compile Include="Unity\Entities\ComponentSystemInjection.cs" />
+    <Compile Include="Unity\Entities\ArchetypeChunk.cs" />
+    <Compile Include="Unity\Entities\BufferAccessor!1.cs" />
+    <Compile Include="Unity\Entities\GatherChunks.cs" />
+    <Compile Include="Unity\Entities\ArchetypeChunkArray.cs" />
+    <Compile Include="Unity\Entities\ArchetypeChunkComponentType!1.cs" />
+    <Compile Include="Unity\Entities\ArchetypeChunkBufferType!1.cs" />
+    <Compile Include="Unity\Entities\ArchetypeChunkSharedComponentType!1.cs" />
+    <Compile Include="Unity\Entities\ArchetypeChunkEntityType.cs" />
+    <Compile Include="Unity\Entities\SharedComponentDataManager.cs" />
+    <Compile Include="Unity\Entities\ComponentJobSafetyManager.cs" />
+    <Compile Include="Unity\Entities\UnsafeLinkedListNode.cs" />
+    <Compile Include="Unity\Entities\SubtractiveComponent!1.cs" />
+    <Compile Include="Unity\Entities\ComponentType.cs" />
+    <Compile Include="Unity\Entities\World.cs" />
+    <Compile Include="Unity\Entities\FastEquality.cs" />
+    <Compile Include="Unity\Entities\EntityArchetype.cs" />
+    <Compile Include="Unity\Entities\Entity.cs" />
+    <Compile Include="Unity\Entities\EntityManager.cs" />
+    <Compile Include="Unity\Entities\ChangeVersionUtility.cs" />
+    <Compile Include="Unity\Entities\DynamicBuffer!1.cs" />
+    <Compile Include="Unity\Entities\BufferFromEntity!1.cs" />
+    <Compile Include="Unity\Entities\InjectFromEntityData.cs" />
+    <Compile Include="Unity\Entities\EntityGroupManager.cs" />
+    <Compile Include="Unity\Entities\MatchingArchetypes.cs" />
+    <Compile Include="Unity\Entities\ArchetypeQuery.cs" />
+    <Compile Include="Unity\Entities\EntityGroupData.cs" />
+    <Compile Include="Unity\Entities\ComponentDataFromEntity!1.cs" />
+    <Compile Include="Unity\Entities\UpdateBeforeAttribute.cs" />
+    <Compile Include="Unity\Entities\UpdateAfterAttribute.cs" />
+    <Compile Include="Unity\Entities\UpdateInGroupAttribute.cs" />
+    <Compile Include="Unity\Entities\ScriptBehaviourUpdateOrder.cs" />
+    <Compile Include="Unity\Entities\ChunkListMap.cs" />
+    <Compile Include="Unity\Entities\BasicCommand.cs" />
+    <Compile Include="Unity\Entities\CreateCommand.cs" />
+    <Compile Include="Unity\Entities\EntityCommand.cs" />
+    <Compile Include="Unity\Entities\EntityComponentCommand.cs" />
+    <Compile Include="Unity\Entities\EntityBufferCommand.cs" />
+    <Compile Include="Unity\Entities\EntitySharedComponentCommand.cs" />
+    <Compile Include="Unity\Entities\EntityCommandBufferChain.cs" />
+    <Compile Include="Unity\Entities\ECBSharedPlaybackState.cs" />
+    <Compile Include="Unity\Entities\ECBChainPlaybackState.cs" />
+    <Compile Include="Unity\Entities\ECBChainHeapElement.cs" />
+    <Compile Include="Unity\Entities\ECBChainPriorityQueue.cs" />
+    <Compile Include="Unity\Entities\ECBCommand.cs" />
+    <Compile Include="Unity\Entities\ECBChunk.cs" />
+    <Compile Include="Unity\Entities\EntityCommandBufferData.cs" />
+    <Compile Include="Unity\Entities\EntityCommandBuffer.cs" />
+    <Compile Include="Unity\Entities\ComponentTypeInArchetype.cs" />
+    <Compile Include="Unity\Entities\Chunk.cs" />
+    <Compile Include="Unity\Entities\Archetype.cs" />
+    <Compile Include="Unity\Entities\ArchetypeManager.cs" />
+    <Compile Include="Unity\Entities\ComponentSystemBase.cs" />
+    <Compile Include="Unity\Entities\ComponentSystem.cs" />
+    <Compile Include="Unity\Entities\JobComponentSystem.cs" />
+    <Compile Include="Unity\Entities\BarrierSystem.cs" />
+    <Compile Include="Unity\Entities\VoidSystem!1.cs" />
+    <Compile Include="Unity\Entities\HashUtility.cs" />
+    <Compile Include="Unity\Entities\ChunkDataUtility.cs" />
+    <Compile Include="Unity\Entities\CopyComponentData!1.cs" />
+    <Compile Include="Unity\Entities\MemsetNativeArray!1.cs" />
+    <Compile Include="Unity\Entities\CopyEntities.cs" />
+    <Compile Include="Unity\Entities\ProxyComponentData.cs" />
+    <Compile Include="Unity\Entities\ProxyBufferElementData.cs" />
+    <Compile Include="Unity\Entities\ProxySharedComponentData.cs" />
+    <Compile Include="Unity\Entities\InjectComponentGroupData.cs" />
+    <Compile Include="Unity\Entities\IComponentData.cs" />
+    <Compile Include="Unity\Entities\IBufferElementData.cs" />
+    <Compile Include="Unity\Entities\InternalBufferCapacityAttribute.cs" />
+    <Compile Include="Unity\Entities\ISharedComponentData.cs" />
+    <Compile Include="Unity\Entities\ISystemStateComponentData.cs" />
+    <Compile Include="Unity\Entities\ISystemStateSharedComponentData.cs" />
+    <Compile Include="Unity\Entities\Disabled.cs" />
+    <Compile Include="Unity\Entities\Prefab.cs" />
+    <Compile Include="Unity\Entities\BufferHeader.cs" />
+    <Compile Include="Unity\Entities\Serialization\SerializeUtility.cs" />
+    <Compile Include="Unity\Entities\Serialization\BinaryWriter.cs" />
+    <Compile Include="Unity\Entities\Serialization\BinaryWriterExtensions.cs" />
+    <Compile Include="Unity\Entities\Serialization\BinaryReader.cs" />
+    <Compile Include="Unity\Entities\Serialization\BinaryReaderExtensions.cs" />
+    <Compile Include="Unity\Entities\Serialization\StreamBinaryReader.cs" />
+    <Compile Include="Unity\Entities\Serialization\StreamBinaryWriter.cs" />
+  </ItemGroup>
+</Project>
